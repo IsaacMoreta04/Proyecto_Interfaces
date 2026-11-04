@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu Trámite IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / BARRA DE NAVEGACIÓN ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Botón hamburguesa (solo se ve en celular) -->
+      <button class="navbar__toggle" id="navToggle" type="button"
+              aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 6h16M3 11h16M3 16h16"/>
+        </svg>
+      </button>
+
+      <!-- Logo y nombre -->
+      <a class="navbar__brand" href="#inicio" aria-label="Tu Trámite IA, inicio">
+        <svg class="navbar__logo" width="36" height="36" viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <rect x="4" y="6" width="18" height="15" rx="5"/>
+          <path d="M13 6V3M9 13q1.5-2 3 0M14 13q1.5-2 3 0M10 17q3 2 6 0"/>
+        </svg>
+        <span class="navbar__nombre" aria-hidden="true">
+          <span>Tu</span>
+          <span>Trámite</span>
+          <span>IA</span>
+        </span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Principal">
+        <ul class="navbar__menu">
+          <li><a class="navbar__link" href="#sobre-nosotros">Ayuda</a></li>
+          <li><a class="navbar__link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Acciones (derecha) -->
+      <div class="navbar__acciones">
+        <button class="navbar__icono" type="button" aria-label="Chat con el asistente">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M10 2.5c-4.14 0-7.5 2.8-7.5 6.25 0 1.9 1 3.6 2.6 4.75-.1 1.1-.55 2.1-1.35 2.9 1.7-.1 3.1-.7 4.1-1.55.7.15 1.4.2 2.15.2 4.14 0 7.5-2.8 7.5-6.3S14.14 2.5 10 2.5z"/>
+          </svg>
+        </button>
+
+        <span class="navbar__sep" aria-hidden="true"></span>
+
+        <button class="navbar__icono" type="button" aria-label="Notificaciones">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M10 2a5 5 0 0 0-5 5v3.2L3.5 13.5V15h13v-1.5L15 10.2V7a5 5 0 0 0-5-5zm-2 14a2 2 0 0 0 4 0H8z"/>
+          </svg>
+        </button>
+
+        <span class="navbar__sep" aria-hidden="true"></span>
+
+        <!-- Importante: conserva id="btnLogin", main.js lo usa -->
+        <button class="btn-login" id="btnLogin" type="button">
+          <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
+            <circle cx="8" cy="8" r="8" fill="#202226"/>
+            <circle cx="8" cy="6" r="2.6" fill="#fff"/>
+            <path d="M3 13q5-6 10 0" fill="#fff"/>
+          </svg>
+          Iniciar sesión
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== MAIN (robot, burbuja y ventajas) ===== -->
+  <main class="main" id="inicio">
+    <div class="robot" id="robot">
+      <svg viewBox="0 0 330 420" role="img" aria-label="Asistente virtual saludando">
+        <g stroke="#2a2f45" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+          <!-- antena -->
+          <line x1="165" y1="80" x2="165" y2="40" fill="none"/>
+          <circle cx="165" cy="30" r="14" fill="#9aa0ab"/>
+          <!-- cuerpo -->
+          <path d="M70 420 Q70 320 120 300 L210 300 Q260 320 260 420 Z" fill="#e8ecf8"/>
+          <!-- brazo izquierdo -->
+          <path d="M80 330 Q50 360 60 420" fill="none" stroke-width="22" stroke="#2a2f45"/>
+          <path d="M80 330 Q50 360 60 420" fill="none" stroke-width="14" stroke="#e8ecf8"/>
+          <!-- brazo que saluda -->
+          <g class="robot__brazo">
+            <path d="M250 330 Q300 310 295 270" fill="none" stroke-width="26" stroke="#2a2f45"/>
+            <path d="M250 330 Q300 310 295 270" fill="none" stroke-width="18" stroke="#e8ecf8"/>
+            <circle cx="296" cy="262" r="20" fill="#e8ecf8"/>
+          </g>
+          <!-- orejas -->
+          <rect x="10" y="150" width="34" height="80" rx="14" fill="#7d828e"/>
+          <rect x="286" y="150" width="34" height="80" rx="14" fill="#7d828e"/>
+          <!-- cabeza -->
+          <rect x="30" y="80" width="270" height="215" rx="85" fill="#e8ecf8"/>
+          <!-- pantalla -->
+          <rect x="62" y="108" width="206" height="150" rx="52" fill="#4a4d54"/>
+        </g>
+        <!-- cara -->
+        <g class="ojos" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round">
+          <path d="M100 185 Q118 160 136 185"/>
+          <path d="M194 185 Q212 160 230 185"/>
+        </g>
+        <path d="M148 212 Q165 228 182 212" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <section class="dialogo">
+      <div class="burbuja" id="burbuja" aria-live="polite">
+        <span id="texto"></span><span class="cursor" id="cursor"></span>
+      </div>
+    </section>
+
+    <ul class="beneficios">
+      <li>
+        <svg viewBox="0 0 42 42" aria-hidden="true"><path d="M26 2L8 24h10l-4 16L34 16H23z" fill="#111"/></svg>
+        <span>Respuestas<br>rápidas</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 42 42" aria-hidden="true">
+          <path d="M21 3L6 9v11c0 10 6 16 15 19 9-3 15-9 15-19V9z" fill="#9a9ca6" stroke="#2a2f45" stroke-width="2"/>
+          <path d="M14 21l5 5 9-10" fill="none" stroke="#2a2f45" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span>Información<br>oficial</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 42 42" aria-hidden="true">
+          <circle cx="21" cy="21" r="19" fill="#9a9ca6" stroke="#2a2f45" stroke-width="2"/>
+          <path d="M21 9v13l8 5" fill="none" stroke="#2a2f45" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="6" y="34" font-size="13" fill="#2a2f45" font-family="Georgia, serif">24</text>
+        </svg>
+        <span>Disponible<br>24/7</span>
+      </li>
+    </ul>
+  </main>
+
+  <!-- ===== SOBRE NOSOTROS (fuera del main, después de </main>) ===== -->
+  <section class="sobre" id="sobre-nosotros" aria-labelledby="sobre-titulo">
+    <div class="sobre__contenedor">
+
+      <!-- Texto + imagen -->
+      <div class="sobre__intro">
+        <div class="sobre__texto">
+          <span class="sobre__etiqueta">Sobre nosotros</span>
+          <h2 class="sobre__titulo" id="sobre-titulo">¿Por qué elegir<br>Tu Trámite IA?</h2>
+          <p class="sobre__descripcion">
+            Sabemos que encontrar información sobre trámites y servicios públicos
+            puede ser complicado. Por eso, creamos Tu Trámite IA, un asistente
+            virtual que utiliza inteligencia artificial para ayudarte a encontrar
+            respuestas y orientarte durante tus consultas de manera fácil y rápida.
+          </p>
+        </div>
+
+        <div class="sobre__imagen">
+          <!-- Cambia el nombre por el de tu imagen dentro de la carpeta imagenes -->
+          <img src="imagenes/robot_sobre_nosotros.png" alt="Asistente virtual sosteniendo un documento y con el pulgar arriba">
+        </div>
+      </div>
+
+      <!-- Tarjetas -->
+      <ul class="sobre__tarjetas">
+        <li class="tarjeta">
+          <span class="tarjeta__icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L4 14h7l-1 8 9-12h-7z"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="tarjeta__titulo">Fácil de utilizar</h3>
+            <p class="tarjeta__texto">Realiza consultas utilizando lenguaje sencillo.</p>
+          </div>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="tarjeta__titulo">Ahorra tiempo</h3>
+            <p class="tarjeta__texto">Encuentra orientación sin búsquedas complicadas.</p>
+          </div>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.5l8 3v6.2c0 5-3.4 8.2-8 9.8-4.6-1.6-8-4.8-8-9.8V5.5z" fill="currentColor"/>
+              <path d="M8.5 12l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="tarjeta__titulo">Mayor confianza</h3>
+            <p class="tarjeta__texto">Consulta información basada en fuentes oficiales.</p>
+          </div>
+        </li>
+
+        <li class="tarjeta">
+          <span class="tarjeta__icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v3"/>
+              <circle cx="12" cy="2.8" r="0.8" fill="currentColor"/>
+              <rect x="4" y="7" width="16" height="12" rx="5"/>
+              <circle cx="9" cy="13" r="1.2" fill="currentColor" stroke="none"/>
+              <circle cx="15" cy="13" r="1.2" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="tarjeta__titulo">Asistencia inteligente</h3>
+            <p class="tarjeta__texto">Obtén respuestas mediante inteligencia artificial.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
