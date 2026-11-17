@@ -6,6 +6,18 @@
   --fondo: #e0e0e0;
   --contorno: #2a2f45;
   --texto: #1c1c1c;
+  --color-bg: #e5e5e5;
+  --color-white: #ffffff;
+  --color-soft: #f3f4f6;
+  --color-card: #e4e4e4;
+  --color-blue: #3b82f6;
+  --color-blue-dark: #2563eb;
+  --color-dark: #212529;
+  --color-text: #263238;
+  --color-muted: #737b83;
+  --font-main: "Anonymous Pro", monospace;
+  --font-title: "Source Serif 4", serif;
+  --shadow: 0 12px 35px rgba(25, 35, 50, .08);
 }
  
 /* ===== Base ===== */
@@ -868,3 +880,126 @@ body {
   height: 100%;
   object-fit: contain;
 }
+
+/* fOOOTER */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem clamp(1.25rem, 5vw, 5rem) 1.2rem;
+  background: var(--header);
+  color: #f5f6f7;
+}
+
+.footer__container {
+  max-width: 430px;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer__logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer__container p {
+  line-height: 1.6;
+  color: #f5f6f7;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.footer__social a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer__social img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.footer__links h3 {
+  margin: 0 0 0.5rem;
+  font-family: system-ui, sans-serif;
+  
+}
+
+.footer__links a {
+  color: #c2c7ce;
+  text-decoration: none;
+}
+
+.footer__links a:hover,
+.footer__bottom a:hover {
+  color: #8db8ff;
+}
+
+.footer__bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #454b51;
+  color: #b8bec5;
+  font-size: 0.85rem;
+}
+
+.footer__bottom a {
+  color: #b8bec5;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
